@@ -1,0 +1,73 @@
+.siteNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navLogo {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+}
+
+.navLogo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal);
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.navLinks a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover {
+  color: var(--teal);
+}
+
+.navCta {
+  background: var(--teal);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+  font-family: 'Nunito', sans-serif;
+}
+
+.navCta:hover {
+  background: var(--teal-dark);
+}
+
+@media (max-width: 768px) {
+  .siteNav {
+    padding: 0.9rem 1.25rem;
+  }
+  .navLinks {
+    display: none;
+  }
+}

@@ -1,7 +1,9 @@
+import Navbar from './components/Navbar/Navbar';
+
 function App() {
   return (
     <div>
-      {/* Sections will go here */}
+      <Navbar />
     </div>
   );
 }
