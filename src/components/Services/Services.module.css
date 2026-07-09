@@ -1,0 +1,170 @@
+.servicesSection {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.serviceCard {
+  background: var(--warm-white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px) rotate(0.6deg);
+  box-shadow: 0 18px 44px rgba(29, 170, 188, 0.18);
+}
+
+.serviceCard h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--navy);
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed var(--border);
+}
+
+.priceStarting {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 10px 0 4px;
+}
+
+.priceStarting span {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--teal-dark);
+}
+
+.priceList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceList li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.priceList li:last-child {
+  border-bottom: none;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--teal-dark);
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+}
+
+.serviceNote {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  line-height: 1.65;
+}
+
+.addonLabel {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 16px 0 10px;
+  margin-top: 2.5rem;
+}
+
+.addonGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.addonItem {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.addonItem:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 14px rgba(29, 170, 188, 0.15);
+  border-color: var(--teal-mid);
+}
+
+.addonName {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--charcoal);
+  font-family: 'Nunito', sans-serif;
+}
+
+.addonPrice {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .addonGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
