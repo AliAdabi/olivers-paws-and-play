@@ -1,5 +1,6 @@
 import styles from './Hero.module.css';
 import Paw from './Paw';
+import HeroStats from './HeroStats';
 
 const TEAL = '#1DAABC';
 const YELLOW = '#FFD166';
@@ -65,6 +66,7 @@ function Hero() {
         <a href="#book" className={styles.btnPrimary}>Book a meet &amp; greet</a>
         <a href="#services" className={styles.btnSecondary}>See services &amp; pricing</a>
       </div>
+      <HeroStats />
     </div>
   );
 }

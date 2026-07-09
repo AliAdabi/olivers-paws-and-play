@@ -1,0 +1,53 @@
+.heroStats {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1.5rem;
+  border-top: 2px dashed var(--teal-mid);
+  width: 100%;
+  max-width: 560px;
+}
+
+.heroStat {
+  text-align: center;
+}
+
+.heroStatNum {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--navy);
+  font-family: 'Nunito', sans-serif;
+  animation: statPop 0.55s ease both;
+}
+
+.heroStat:nth-child(1) .heroStatNum {
+  animation-delay: 0.15s;
+}
+
+.heroStat:nth-child(2) .heroStatNum {
+  animation-delay: 0.28s;
+}
+
+.heroStat:nth-child(3) .heroStatNum {
+  animation-delay: 0.41s;
+}
+
+.heroStat:nth-child(4) .heroStatNum {
+  animation-delay: 0.54s;
+}
+
+.heroStatLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 768px) {
+  .heroStats {
+    gap: 1.5rem;
+  }
+}
