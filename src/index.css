@@ -45,3 +45,25 @@ section {
     padding: 3.5rem 1.25rem;
   }
 }
+
+@keyframes pawFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg) scale(1);
+    opacity: 0.13;
+  }
+  50% {
+    transform: translateY(-24px) rotate(8deg) scale(1.06);
+    opacity: 0.22;
+  }
+}
+
+@keyframes pawDrift {
+  0%, 100% {
+    transform: translateY(0) rotate(14deg) scale(1);
+    opacity: 0.09;
+  }
+  50% {
+    transform: translateY(-16px) rotate(-5deg) scale(0.94);
+    opacity: 0.17;
+  }
+}

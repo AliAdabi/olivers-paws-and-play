@@ -41,6 +41,16 @@
   z-index: 1;
 }
 
+.heroPaw {
+  position: absolute !important;
+  pointer-events: none;
+  z-index: 0 !important;
+}
+
+.heroPaw svg {
+  display: block;
+}
+
 .heroLogoWrap {
   position: relative;
   display: inline-block;
@@ -173,5 +183,8 @@
   .hero::before,
   .hero::after {
     display: none;
+  }
+  .heroPaw {
+    display: none !important;
   }
 }
