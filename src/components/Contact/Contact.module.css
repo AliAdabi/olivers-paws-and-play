@@ -189,3 +189,16 @@
     grid-template-columns: 1fr;
   }
 }
+.submitSuccess {
+  background: var(--teal-dark);
+}
+
+.submitError {
+  background: #c0392b;
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}

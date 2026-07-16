@@ -1,6 +1,43 @@
+import { useState } from 'react';
 import styles from './Contact.module.css';
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgobqwvb';
+
 function Contact() {
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    setStatus('sending');
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+
+    setTimeout(() => setStatus('idle'), 4000);
+  }
+
+  const buttonText = {
+    idle: 'Send message',
+    sending: 'Sending...',
+    success: 'Message sent!',
+    error: 'Something went wrong, please try again',
+  }[status];
+
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={styles.sectionLabel}>Contact</div>
@@ -60,7 +97,7 @@ function Contact() {
         </div>
         <div className={styles.contactCard}>
           <h3>Send a message</h3>
-          <form className={styles.formFields}>
+          <form className={styles.formFields} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
               <label htmlFor="name">Your name</label>
               <input id="name" type="text" name="name" placeholder="Jane Doe" required />
@@ -89,8 +126,12 @@ function Contact() {
                 required
               />
             </div>
-            <button type="submit" className={styles.submitBtn}>
-              Send message
+            <button
+              type="submit"
+              className={status === 'error' ? `${styles.submitBtn} ${styles.submitError}` : status === 'success' ? `${styles.submitBtn} ${styles.submitSuccess}` : styles.submitBtn}
+              disabled={status === 'sending'}
+            >
+              {buttonText}
             </button>
           </form>
         </div>
