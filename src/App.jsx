@@ -3,6 +3,7 @@ import Hero from './components/Hero/Hero';
 import WhyUs from './components/WhyUs/WhyUs';
 import Services from './components/Services/Services';
 import Packages from './components/Packages/Packages';
+import Testimonials from './components/Testimonials/Testimonials';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <WhyUs />
       <Services />
       <Packages />
+      <Testimonials />
     </div>
   );
 }
