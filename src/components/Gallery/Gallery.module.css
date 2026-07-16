@@ -1,0 +1,87 @@
+.gallerySection {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.galleryItem {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 3px solid var(--teal-light);
+  box-shadow: 0 12px 32px rgba(29, 170, 188, 0.14);
+  background: #fff;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px) rotate(-0.6deg);
+  box-shadow: 0 18px 44px rgba(29, 170, 188, 0.22);
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.galleryItem figcaption {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--navy);
+  text-align: center;
+  padding: 12px 10px;
+}
+
+@media (max-width: 800px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+}
