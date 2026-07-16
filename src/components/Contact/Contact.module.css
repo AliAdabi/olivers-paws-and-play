@@ -1,0 +1,191 @@
+.contactSection {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contactCard {
+  background: var(--warm-white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contactCard h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy);
+  font-family: 'Nunito', sans-serif;
+}
+
+.contactCard > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.contactDetail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.contactDetail:last-child {
+  border-bottom: none;
+}
+
+.contactDetail a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contactDetail a:hover {
+  color: var(--teal-dark);
+}
+
+.contactIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactIcon svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--teal-dark);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.formGroup label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--charcoal);
+  font-family: 'Nunito', sans-serif;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 14px;
+  width: 100%;
+  font-family: inherit;
+  color: var(--charcoal);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: var(--teal);
+}
+
+.formGroup textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.submitBtn {
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 4px;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(29, 170, 188, 0.3);
+}
+
+.submitBtn:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

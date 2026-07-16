@@ -9,6 +9,7 @@ import Gallery from './components/Gallery/Gallery';
 import Areas from './components/Areas/Areas';
 import Book from './components/Book/Book';
 import Sendoff from './components/Sendoff/Sendoff';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Areas />
       <Book />
       <Sendoff />
+      <Contact />
     </div>
   );
 }
