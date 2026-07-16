@@ -7,6 +7,8 @@ import Testimonials from './components/Testimonials/Testimonials';
 import About from './components/About/About';
 import Gallery from './components/Gallery/Gallery';
 import Areas from './components/Areas/Areas';
+import Book from './components/Book/Book';
+import Sendoff from './components/Sendoff/Sendoff';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <About />
       <Gallery />
       <Areas />
+      <Book />
+      <Sendoff />
     </div>
   );
 }

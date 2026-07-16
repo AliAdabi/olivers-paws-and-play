@@ -1,0 +1,121 @@
+.bookSection {
+  background: linear-gradient(180deg, #FFFBEF 0%, #FFF6DD 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bookSection::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 209, 102, 0.18);
+  z-index: 0;
+}
+
+.bookSection > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--teal-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.bookFreePill {
+  background: var(--yellow);
+  color: var(--charcoal);
+  font-size: 11px;
+  font-weight: 900;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-right: 8px;
+  vertical-align: middle;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.bookCtaWrap {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btnPrimary {
+  background: var(--teal);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  box-shadow: 0 4px 20px rgba(29, 170, 188, 0.35);
+}
+
+.btnPrimary:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  background: #fff;
+  color: var(--navy);
+  border: 2.5px solid var(--navy);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btnSecondary:hover {
+  background: var(--navy-light);
+  transform: translateY(-1px);
+}
+
+.bookCtaBtn {
+  font-size: 16px;
+  padding: 16px 30px;
+}
