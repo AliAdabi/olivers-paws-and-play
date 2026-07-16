@@ -10,23 +10,27 @@ import Areas from './components/Areas/Areas';
 import Book from './components/Book/Book';
 import Sendoff from './components/Sendoff/Sendoff';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Hero />
-      <WhyUs />
-      <Services />
-      <Packages />
-      <Testimonials />
-      <About />
-      <Gallery />
-      <Areas />
-      <Book />
-      <Sendoff />
-      <Contact />
-    </div>
+      <main>
+        <Hero />
+        <WhyUs />
+        <Services />
+        <Packages />
+        <Testimonials />
+        <About />
+        <Gallery />
+        <Areas />
+        <Book />
+        <Sendoff />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,41 @@
+.footer {
+  background: var(--charcoal);
+  color: #B4B2A9;
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 13px;
+  line-height: 2.2;
+}
+
+.footerLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal);
+  margin-bottom: 1rem;
+}
+
+.footer strong {
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  display: block;
+}
+
+.footer a {
+  color: var(--teal-mid);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: var(--teal-light);
+}
+
+.copyright {
+  opacity: 0.4;
+  font-size: 12px;
+  display: block;
+  margin-top: 0.5rem;
+}
