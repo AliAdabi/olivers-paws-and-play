@@ -1,0 +1,183 @@
+.packagesSection {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--teal-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--teal-mid);
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: #B4C5DF;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.packageCard {
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.packageCard:hover {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
+}
+
+.packageCard.featured {
+  background: #fff;
+  border-color: var(--yellow);
+}
+
+.pkgLabel {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal-mid);
+  font-family: 'Nunito', sans-serif;
+}
+
+.featured .pkgLabel {
+  color: var(--teal-dark);
+}
+
+.pkgName {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.featured .pkgName {
+  color: var(--navy);
+}
+
+.pkgPrice {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--yellow);
+  line-height: 1;
+  font-family: 'Nunito', sans-serif;
+}
+
+.featured .pkgPrice {
+  color: var(--teal);
+}
+
+.pkgPrice span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.featured .pkgPrice span {
+  color: var(--text-muted);
+}
+
+.pkgDivider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 4px 0;
+}
+
+.featured .pkgDivider {
+  border-color: var(--border);
+}
+
+.pkgDesc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.featured .pkgDesc {
+  color: var(--text-secondary);
+}
+
+.pkgSave {
+  font-size: 13px;
+  color: var(--yellow);
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+}
+
+.featured .pkgSave {
+  color: var(--teal-dark);
+}
+
+.loyaltyRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 2.5rem;
+}
+
+.loyaltyCard {
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+}
+
+.loyaltyCard h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.loyaltyCard p {
+  font-size: 13px;
+  color: #B4C5DF;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .loyaltyRow {
+    grid-template-columns: 1fr;
+  }
+}
