@@ -1,7 +1,6 @@
 .contactSection {
   background: #fff;
-  position: relative;
-  overflow: hidden;
+  padding: 5rem 2.5rem;
 }
 
 .sectionLabel {
@@ -33,12 +32,13 @@
   margin-bottom: 0.75rem;
   color: var(--navy);
   line-height: 1.2;
+  font-family: 'Nunito', sans-serif;
 }
 
 .sectionSub {
   font-size: 16px;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   line-height: 1.75;
   max-width: 560px;
 }
@@ -87,16 +87,6 @@
   border-bottom: none;
 }
 
-.contactDetail a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.contactDetail a:hover {
-  color: var(--teal-dark);
-}
-
 .contactIcon {
   width: 32px;
   height: 32px;
@@ -116,6 +106,12 @@
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.contactLink {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .formFields {
@@ -184,21 +180,29 @@
   transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
-  .contactGrid {
-    grid-template-columns: 1fr;
-  }
+.submitBtn:disabled {
+  opacity: 0.8;
+  cursor: default;
 }
-.submitSuccess {
+
+.submitBtnSuccess {
   background: var(--teal-dark);
 }
 
-.submitError {
+.submitBtnError {
   background: #c0392b;
 }
 
-.submitBtn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
+.submitBtnError:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
 }
