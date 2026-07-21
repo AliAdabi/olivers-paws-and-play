@@ -1,5 +1,6 @@
 .aboutSection {
   background: #fff;
+  padding: 5rem 2.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -22,15 +23,28 @@
 .aboutImgWrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  padding: 1.5rem;
 }
 
 .aboutContent {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.aboutContent h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.3;
+  font-family: 'Nunito', sans-serif;
+}
+
+.aboutContent p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 .sectionLabel {
@@ -55,14 +69,23 @@
   flex-shrink: 0;
 }
 
-.aboutContent h2 {
-  font-size: 32px;
-  font-weight: 900;
-  color: var(--navy);
-  line-height: 1.3;
+.storyBox {
+  background: var(--teal-light);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
 }
 
-.aboutContent p {
+.storyBox h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.storyBox p {
+  margin: 0;
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.8;
@@ -75,7 +98,7 @@
   margin-top: 0.5rem;
 }
 
-.teal {
+.pillTeal {
   background: var(--teal-light);
   color: var(--teal-dark);
   font-size: 13px;
@@ -86,7 +109,7 @@
   border: 1.5px solid var(--teal-mid);
 }
 
-.navy {
+.pillNavy {
   background: var(--navy-light);
   color: var(--navy);
   font-size: 13px;
@@ -94,12 +117,12 @@
   padding: 6px 16px;
   border-radius: 999px;
   font-family: 'Nunito', sans-serif;
-  border: 1.5px solid #C5D3E8;
+  border: 1.5px solid #c5d3e8;
 }
 
-.yellow {
+.pillYellow {
   background: var(--yellow-light);
-  color: #7A5C00;
+  color: #7a5c00;
   font-size: 13px;
   font-weight: 700;
   padding: 6px 16px;
@@ -109,6 +132,10 @@
 }
 
 @media (max-width: 768px) {
+  .aboutSection {
+    padding: 3.5rem 1.25rem;
+  }
+
   .aboutWrap {
     grid-template-columns: 1fr;
     gap: 2rem;

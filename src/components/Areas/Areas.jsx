@@ -1,52 +1,35 @@
 import styles from './Areas.module.css';
+import areasPhoto from '../../assets/areas-walk.jpg';
 
-const areas = [
-  'Walnut Creek',
-  'Concord',
-  'Pleasant Hill',
-  'Lafayette',
-  'Moraga',
-  'Alamo',
-  'Danville',
-  'Martinez',
-];
-
-function Areas() {
+export default function Areas() {
   return (
     <section id="areas" className={styles.areasSection}>
       <div className={styles.areasGrid}>
-        <div className={styles.areasContent}>
-          <div className={styles.sectionLabel}>Areas We Serve</div>
-          <h2 className={styles.sectionTitle}>
-            Proudly serving Contra Costa County
-          </h2>
-          <p className={styles.sectionSub}>
-            Based in Walnut Creek, we provide boarding, walking, and daycare for
-            dogs across the East Bay. If you're nearby but don't see your city,
-            reach out — we may still be able to help.
-          </p>
-          <ul className={styles.areasList}>
-            {areas.map((area) => (
-              <li key={area}>
-                <svg viewBox="0 0 24 24" className={styles.pinIcon}>
-                  <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" />
-                  <circle cx="12" cy="10" r="2.5" />
-                </svg>
-                {area}
-              </li>
-            ))}
-          </ul>
+        <div>
+          <div className={styles.sectionLabel}>Where we serve</div>
+          <div className={styles.sectionTitle}>Dog boarding, walking &amp; daycare across the East Bay</div>
+          <div className={styles.sectionSub}>
+            Whether you need dog boarding in Walnut Creek, a dog walker in Concord, a pet sitter in Pleasant
+            Hill, overnight dog sitting in Lafayette, or East Bay dog daycare, we're the in-home pet sitting
+            alternative to national apps and big-box kennels.
+          </div>
+          <div className={styles.aboutPills}>
+            <span className={styles.pillTeal}>Walnut Creek</span>
+            <span className={styles.pillNavy}>Concord</span>
+            <span className={styles.pillYellow}>Pleasant Hill</span>
+            <span className={styles.pillTeal}>Lafayette</span>
+            <span className={styles.pillNavy}>Moraga</span>
+            <span className={styles.pillYellow}>Alamo</span>
+            <span className={styles.pillTeal}>Danville</span>
+            <span className={styles.pillNavy}>Martinez</span>
+            <span className={styles.pillYellow}>Contra Costa County</span>
+          </div>
         </div>
         <figure className={styles.areasPhoto}>
-          <img
-            src="https://i.imgur.com/T8wKmEQ.png"
-            alt="Happy dog out on a walk in the East Bay"
-          />
-          <figcaption>Adventures all across the East Bay</figcaption>
+          <img src={areasPhoto} alt="Two dogs on a leashed walk at golden hour in an East Bay park" loading="lazy" />
+          <figcaption>Out on a neighborhood walk at golden hour</figcaption>
         </figure>
       </div>
     </section>
   );
 }
-
-export default Areas;

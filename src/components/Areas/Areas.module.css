@@ -1,7 +1,6 @@
 .areasSection {
   background: var(--warm-white);
-  position: relative;
-  overflow: hidden;
+  padding: 5rem 2.5rem;
 }
 
 .areasGrid {
@@ -40,42 +39,55 @@
   margin-bottom: 0.75rem;
   color: var(--navy);
   line-height: 1.2;
+  font-family: 'Nunito', sans-serif;
 }
 
 .sectionSub {
   font-size: 16px;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   line-height: 1.75;
   max-width: 560px;
 }
 
-.areasList {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.areasList li {
+.aboutPills {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--charcoal);
-  font-family: 'Nunito', sans-serif;
+  margin-top: 0.5rem;
 }
 
-.pinIcon {
-  width: 18px;
-  height: 18px;
-  stroke: var(--teal);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  flex-shrink: 0;
+.pillTeal {
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-family: 'Nunito', sans-serif;
+  border: 1.5px solid var(--teal-mid);
+}
+
+.pillNavy {
+  background: var(--navy-light);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-family: 'Nunito', sans-serif;
+  border: 1.5px solid #c5d3e8;
+}
+
+.pillYellow {
+  background: var(--yellow-light);
+  color: #7a5c00;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-family: 'Nunito', sans-serif;
+  border: 1.5px solid var(--yellow);
 }
 
 .areasPhoto {
@@ -84,13 +96,13 @@
   border: 3px solid var(--teal-light);
   box-shadow: 0 14px 40px rgba(29, 170, 188, 0.16);
   background: #fff;
+  margin: 0;
 }
 
 .areasPhoto img {
   width: 100%;
   height: 440px;
-  object-fit: contain;
-  padding: 1.5rem;
+  object-fit: cover;
   display: block;
 }
 
@@ -108,7 +120,14 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .areasPhoto img {
     height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .areasSection {
+    padding: 3.5rem 1.25rem;
   }
 }
