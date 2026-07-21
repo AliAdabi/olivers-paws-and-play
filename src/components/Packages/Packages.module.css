@@ -1,5 +1,6 @@
 .packagesSection {
   background: var(--navy);
+  padding: 5rem 2.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -15,6 +16,8 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  position: relative;
+  z-index: 1;
 }
 
 .sectionLabel::before {
@@ -33,20 +36,27 @@
   margin-bottom: 0.75rem;
   color: #fff;
   line-height: 1.2;
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .sectionSub {
   font-size: 16px;
-  color: #B4C5DF;
+  color: #b4c5df;
   margin-bottom: 2.5rem;
   line-height: 1.75;
   max-width: 560px;
+  position: relative;
+  z-index: 1;
 }
 
 .packagesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .packageCard {
@@ -121,6 +131,7 @@
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin: 4px 0;
+  width: 100%;
 }
 
 .featured .pkgDivider {
@@ -133,8 +144,16 @@
   line-height: 1.7;
 }
 
+.pkgDesc strong {
+  color: #fff;
+}
+
 .featured .pkgDesc {
   color: var(--text-secondary);
+}
+
+.featured .pkgDesc strong {
+  color: var(--navy);
 }
 
 .pkgSave {
@@ -150,9 +169,14 @@
 
 .loyaltyRow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
   margin-top: 2.5rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .loyaltyCard {
@@ -160,6 +184,7 @@
   border: 2px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
   padding: 1.5rem;
+  text-align: center;
 }
 
 .loyaltyCard h4 {
@@ -172,12 +197,66 @@
 
 .loyaltyCard p {
   font-size: 13px;
-  color: #B4C5DF;
+  color: #b4c5df;
   line-height: 1.7;
 }
 
+@keyframes secFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 12deg)) scale(1); opacity: var(--op, 0.08); }
+  50% { transform: translateY(-14px) rotate(calc(var(--r, 12deg) + 8deg)) scale(1.05); opacity: calc(var(--op, 0.08) * 1.5); }
+}
+
+@keyframes secDrift {
+  0%, 100% { transform: translateY(0) rotate(var(--r, -10deg)) scale(1); opacity: var(--op, 0.07); }
+  50% { transform: translateY(12px) rotate(calc(var(--r, -10deg) - 6deg)) scale(0.95); opacity: calc(var(--op, 0.07) * 1.6); }
+}
+
+.paw1 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 5%;
+  left: 1%;
+  --r: 22deg;
+  --op: 0.1;
+  animation: secFloat 9s ease-in-out infinite;
+}
+
+.paw2 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 55%;
+  left: 0.5%;
+  --r: -18deg;
+  --op: 0.08;
+  animation: secDrift 11s ease-in-out infinite 2s;
+}
+
+.paw3 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 15%;
+  right: 1%;
+  --r: 30deg;
+  --op: 0.09;
+  animation: secFloat 8s ease-in-out infinite 1s;
+}
+
+.paw4 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 80%;
+  right: 2%;
+  --r: -28deg;
+  --op: 0.08;
+  animation: secDrift 9.5s ease-in-out infinite 3s;
+}
+
 @media (max-width: 768px) {
-  .loyaltyRow {
-    grid-template-columns: 1fr;
+  .packagesSection {
+    padding: 3.5rem 1.25rem;
   }
 }
