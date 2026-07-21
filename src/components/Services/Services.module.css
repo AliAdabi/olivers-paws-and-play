@@ -1,5 +1,6 @@
 .servicesSection {
   background: #fff;
+  padding: 5rem 2.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -15,6 +16,8 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  position: relative;
+  z-index: 1;
 }
 
 .sectionLabel::before {
@@ -33,6 +36,9 @@
   margin-bottom: 0.75rem;
   color: var(--navy);
   line-height: 1.2;
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .sectionSub {
@@ -41,12 +47,16 @@
   margin-bottom: 2.5rem;
   line-height: 1.75;
   max-width: 560px;
+  position: relative;
+  z-index: 1;
 }
 
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .serviceCard {
@@ -90,6 +100,8 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .priceList li {
@@ -120,6 +132,35 @@
   line-height: 1.65;
 }
 
+.calloutBox {
+  margin-top: 14px;
+  background: var(--teal-light);
+  border: 1.5px solid var(--teal-mid);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.calloutIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.calloutText {
+  font-size: 12px;
+  color: var(--teal-dark);
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 600;
+}
+
+.calloutText a {
+  color: var(--teal-dark);
+  text-decoration: underline;
+}
+
 .addonLabel {
   font-size: 11px;
   font-weight: 800;
@@ -127,12 +168,11 @@
   text-transform: uppercase;
   letter-spacing: 0.07em;
   margin: 16px 0 10px;
-  margin-top: 2.5rem;
 }
 
 .addonGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
 }
 
@@ -163,8 +203,51 @@
   margin-top: 2px;
 }
 
+@keyframes secFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 12deg)) scale(1); opacity: var(--op, 0.08); }
+  50% { transform: translateY(-14px) rotate(calc(var(--r, 12deg) + 8deg)) scale(1.05); opacity: calc(var(--op, 0.08) * 1.5); }
+}
+
+@keyframes secDrift {
+  0%, 100% { transform: translateY(0) rotate(var(--r, -10deg)) scale(1); opacity: var(--op, 0.07); }
+  50% { transform: translateY(12px) rotate(calc(var(--r, -10deg) - 6deg)) scale(0.95); opacity: calc(var(--op, 0.07) * 1.6); }
+}
+
+.paw1 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 5%;
+  right: 1%;
+  --r: 18deg;
+  --op: 0.06;
+  animation: secFloat 10s ease-in-out infinite 0.5s;
+}
+
+.paw2 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 50%;
+  left: 0.5%;
+  --r: -20deg;
+  --op: 0.07;
+  animation: secDrift 8.5s ease-in-out infinite 1.5s;
+}
+
+.paw3 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  top: 80%;
+  right: 2%;
+  --r: 35deg;
+  --op: 0.06;
+  animation: secFloat 12s ease-in-out infinite 2.5s;
+}
+
 @media (max-width: 768px) {
-  .addonGrid {
-    grid-template-columns: 1fr 1fr;
+  .servicesSection {
+    padding: 3.5rem 1.25rem;
   }
 }
