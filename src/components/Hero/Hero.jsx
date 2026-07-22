@@ -1,6 +1,6 @@
 import styles from './Hero.module.css';
 import Paw from './Paw';
-import HeroStats from './HeroStats';
+import HeroStats from './Herostats';
 
 const TEAL = '#1DAABC';
 const YELLOW = '#FFD166';
