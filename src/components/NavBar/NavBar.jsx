@@ -1,4 +1,4 @@
-import styles from './Navbar.module.css';
+import styles from './NavBar.module.css';
 
 const links = [
   { href: '#why', label: 'Why Us' },
