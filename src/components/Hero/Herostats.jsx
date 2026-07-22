@@ -1,4 +1,4 @@
-import styles from './Herostats.module.css';
+import styles from "./HeroStats.module.css";
 
 const stats = [
   { num: '8+', label: 'Years of care' },
